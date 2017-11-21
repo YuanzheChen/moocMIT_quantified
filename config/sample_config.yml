@@ -1,0 +1,33 @@
+mysql:
+  host: localhost
+  port: 3306
+  query_user: no
+  user: root
+  query_password: no
+  password: ALFA
+  query_database: no
+  database: moocdb
+
+pipeline:
+  query: no
+  preprocess: yes
+  timeout: 1000
+  # Currently these scripts fail since no collaborations table
+  skip:
+   - 3
+   - 4
+   - 5
+   - 14
+   - 201
+   - 301
+  is_testing: no
+  test:
+
+course:
+  start_date: 0000-00-00 00:00:00
+  number_of_weeks: 0
+
+mysql_script_path:
+  MLQ_dir: /app/
+  preprocess_folder: preprocess
+  populate_folder: feature_populate
